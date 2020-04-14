@@ -592,30 +592,30 @@ function MonDKP:BidInterface_Create()
     self:ClearFocus()
   end)
 
-  f.BidPlusOne = CreateFrame("Button", nil, f.Bid, "MonolithDKPButtonTemplate")
-  f.BidPlusOne:SetPoint("TOPLEFT", f.Bid, "BOTTOMLEFT", 0, -2);
-  f.BidPlusOne:SetSize(33,20)
-  f.BidPlusOne:SetText("+1");
-  f.BidPlusOne:GetFontString():SetTextColor(1, 1, 1, 1)
-  f.BidPlusOne:SetNormalFontObject("MonDKPSmallCenter");
-  f.BidPlusOne:SetHighlightFontObject("MonDKPSmallCenter");
-  f.BidPlusOne:SetScript("OnClick", function()
-    f.Bid:SetNumber(f.Bid:GetNumber() + 1);
-  end)
+  f.BidPlusTen = CreateFrame("Button", nil, f.Bid, "MonolithDKPButtonTemplate")
+	f.BidPlusTen:SetPoint("TOPLEFT", f.Bid, "BOTTOMLEFT", 0, -2);
+	f.BidPlusTen:SetSize(33,20)
+	f.BidPlusTen:SetText("+10");
+	f.BidPlusTen:GetFontString():SetTextColor(1, 1, 1, 1)
+	f.BidPlusTen:SetNormalFontObject("MonDKPSmallCenter");
+	f.BidPlusTen:SetHighlightFontObject("MonDKPSmallCenter");
+	f.BidPlusTen:SetScript("OnClick", function()
+		f.Bid:SetNumber(f.Bid:GetNumber() + 10);
+	end)
 
-  f.BidPlusFive = CreateFrame("Button", nil, f.Bid, "MonolithDKPButtonTemplate")
-  f.BidPlusFive:SetPoint("TOPRIGHT", f.Bid, "BOTTOMRIGHT", 0, -2);
-  f.BidPlusFive:SetSize(33,20)
-  f.BidPlusFive:SetText("+5");
-  f.BidPlusFive:GetFontString():SetTextColor(1, 1, 1, 1)
-  f.BidPlusFive:SetNormalFontObject("MonDKPSmallCenter");
-  f.BidPlusFive:SetHighlightFontObject("MonDKPSmallCenter");
-  f.BidPlusFive:SetScript("OnClick", function()
-    f.Bid:SetNumber(f.Bid:GetNumber() + 5);
-  end)
+  f.BidPlusFifty = CreateFrame("Button", nil, f.Bid, "MonolithDKPButtonTemplate")
+	f.BidPlusFifty:SetPoint("TOPRIGHT", f.Bid, "BOTTOMRIGHT", 0, -2);
+	f.BidPlusFifty:SetSize(33,20)
+	f.BidPlusFifty:SetText("+50");
+	f.BidPlusFifty:GetFontString():SetTextColor(1, 1, 1, 1)
+	f.BidPlusFifty:SetNormalFontObject("MonDKPSmallCenter");
+	f.BidPlusFifty:SetHighlightFontObject("MonDKPSmallCenter");
+	f.BidPlusFifty:SetScript("OnClick", function()
+		f.Bid:SetNumber(f.Bid:GetNumber() + 50);
+	end)
 
-  f.BidMax = CreateFrame("Button", nil, f.BidPlusFive, "MonolithDKPButtonTemplate")
-  f.BidMax:SetPoint("TOPLEFT", f.BidPlusFive, "BOTTOMLEFT", 0, -2);
+  f.BidMax = CreateFrame("Button", nil, f.BidPlusFifty, "MonolithDKPButtonTemplate")
+  f.BidMax:SetPoint("TOPLEFT", f.BidPlusFifty, "BOTTOMLEFT", 0, -2);
   f.BidMax:SetSize(33,20)
   f.BidMax:SetText("MAX");
   f.BidMax:GetFontString():SetTextColor(1, 1, 1, 1)
@@ -650,8 +650,8 @@ function MonDKP:BidInterface_Create()
     end
   end)
 
-  f.BidHalf = CreateFrame("Button", nil, f.BidPlusOne, "MonolithDKPButtonTemplate")
-  f.BidHalf:SetPoint("TOPLEFT", f.BidPlusOne, "BOTTOMLEFT", 0, -2);
+  f.BidHalf = CreateFrame("Button", nil, f.BidPlusTen, "MonolithDKPButtonTemplate")
+  f.BidHalf:SetPoint("TOPLEFT", f.BidPlusTen, "BOTTOMLEFT", 0, -2);
   f.BidHalf:SetSize(33,20)
   f.BidHalf:SetText("HALF");
   f.BidHalf:GetFontString():SetTextColor(1, 1, 1, 1)
